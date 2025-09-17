@@ -1,0 +1,74 @@
+// fonte
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// classes
+
+.body {
+  background-color: #FFFAED;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid black;
+  padding: 0 13px;
+  margin: 0 122px;
+}
+
+.nome{
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pedro {
+  margin-top: 0px;
+  margin-bottom: -13px;
+  font-size: 24px;
+}
+
+.gama{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 24px;
+}
+
+.titulo {
+  order: 2;
+  font-size: 31px;
+}
+
+.contato {
+  order: 3;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.contato:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid black;
+  padding: 0 13px;
+  margin: 0 122px;
+  height: 635px;
+}
