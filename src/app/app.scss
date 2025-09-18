@@ -11,7 +11,7 @@
   font-style: normal;
 }
 
-// classes
+// containers
 .body {
   background-color: #FFDE84;
 }
@@ -33,6 +33,31 @@
   flex-direction: column;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid black;
+  border-top-width: 0px;
+  padding: 0 13px;
+  margin: 0px 117px 0px 126px;
+  height: 635px;
+}
+
+.botoes-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: -8px 118px 0px 126px;
+  height: 60px;
+}
+
+.triangulo-container{
+  display: flex;
+  margin-left: 118px;
+}
+
+//classes
 .pedro {
   margin-top: 0px;
   margin-bottom: -19px;
@@ -52,6 +77,7 @@
   font-size: 31px;
 }
 
+//botoes
 .contato {
   order: 3;
   border: none;
@@ -61,30 +87,9 @@
   font-weight: 700;
   font-style: normal;
 }
-
 .contato:hover {
   text-decoration: underline;
 }
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: solid black;
-  border-top-width: 0px;
-  padding: 0 13px;
-  margin: 0px 121px 0px 122px;
-  height: 635px;
-}
-
-.botoes-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0px 122px 0px 122px;
-  height: 60px;
-}
-
 
 .sobre-mim-botao {
   border: solid black;
@@ -144,4 +149,20 @@
 .experiencia-botao:focus {
   text-decoration: underline;
   border-bottom-width: 0px;
+}
+
+.triangulo-esquerdo {
+  width: 8px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 0,100% 0,100% 100%);
+  background-color: black;
+  order: 1;
+}
+.triangulo-direito {
+  width: 8px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 100%,0 0,100% 100%);
+  background-color: black;
+  margin-left: 719px;
+  order: 2;
 }
