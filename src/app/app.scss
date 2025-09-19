@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+html, body {
+  background-color: #FFDE84;
+}
+
 // fontes
 .space-mono-regular {
   font-family: "Space Mono", monospace;
@@ -10,6 +16,11 @@
   font-weight: 700;
   font-style: normal;
 }
+
+* {
+  font-family: "Space Mono", monospace;
+}
+
 
 // containers
 .body {
@@ -40,7 +51,7 @@
   border: solid black;
   border-top-width: 0px;
   padding: 0 13px;
-  margin: 0px 117px 0px 126px;
+  margin: 0px 115px 0px 126px;
   height: 635px;
 }
 
@@ -56,6 +67,8 @@
   display: flex;
   margin-left: 118px;
 }
+
+
 
 //classes
 .pedro {
@@ -75,6 +88,7 @@
 .titulo {
   order: 2;
   font-size: 31px;
+  flex-shrink: 1;
 }
 
 //botoes
@@ -91,8 +105,11 @@
   text-decoration: underline;
 }
 
+
+
 .sobre-mim-botao {
   border: solid black;
+  border-top-width: 4px;
   flex-grow: 1;
   background-color: transparent;
   font-size: 20px;
@@ -109,10 +126,15 @@
 .sobre-mim-botao:focus {
   text-decoration: underline;
   border-bottom-width: 0px;
+  border-top-width: 2px;
+  .triangulo-direito {
+    opacity: 0%;
+  }
 }
 
 .projetos-botao {
   border: solid black;
+  border-top-width: 4px;
   flex-grow: 1;
   background-color: transparent;
   font-size: 20px;
@@ -129,10 +151,15 @@
 .projetos-botao:focus {
   text-decoration: underline;
   border-bottom-width: 0px;
+  border-top-width: 2px;
+  .triangulo-direito {
+    opacity: 0%;
+  }
 }
 
 .experiencia-botao {
   border: solid black;
+  border-top-width: 4px;
   flex-grow: 1;
   background-color: transparent;
   font-size: 20px;
@@ -149,8 +176,13 @@
 .experiencia-botao:focus {
   text-decoration: underline;
   border-bottom-width: 0px;
+  border-top-width: 2px;  
+  .triangulo-direito {
+    opacity: 0%;
+  }
 }
 
+//formas
 .triangulo-esquerdo {
   width: 8px;
   aspect-ratio: 1;
@@ -158,11 +190,14 @@
   background-color: black;
   order: 1;
 }
+
 .triangulo-direito {
-  width: 8px;
-  aspect-ratio: 1;
-  clip-path: polygon(0 100%,0 0,100% 100%);
-  background-color: black;
-  margin-left: 719px;
-  order: 2;
+  margin-top: -16px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 8px 8px 0;
+  border-color: transparent #000 transparent transparent;
+  transform: rotate(0deg);
+  margin-left: 414px;
 }
