@@ -1,37 +1,36 @@
-<head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-  </style>
-</head>
-
-<body class="body space-mono-bold">
-
-  <div class="navbar">
-
-    <div class="nome">
-      <h3 class="pedro">Pedro</h3>
-      <h3 class="gama">Gama</h3>
-    </div>
-
-    <h2 class="titulo">&lt;Desenvolvedor&gt;</h2>
-
-    <button class="contato">Contato</button>
-
+<div class="navbar"> 
+  <div class="nome">
+    <h3 class="pedro">Pedro</h3>
+    <h3 class="gama">Gama</h3>
   </div>
+  <h2 class="titulo">&lt;Desenvolvedor&gt;</h2>
+  <button class="contato">Contato</button>
+</div>
 
-  <div class="triangulo-container">
-    <div class="triangulo-esquerdo"></div>
-    <div class="triangulo-direito"></div>
-  </div>
+<div class="triangulo-container">
+  <div class="triangulo-esquerdo"></div>
+</div>
 
-  <div class="botoes-container">
-    <button class="sobre-mim-botao">Sobre mim</button>
-    <button class="projetos-botao">Projetos</button>
-    <button class="experiencia-botao">Experiencia</button>
-  </div>
+<div class="botoes-container">
 
-  <div class="content"></div>
-</body>
+  <button class="sobre-mim-botao">
+      <div class="triangulo-direito"></div>
+    Sobre mim
+  </button>
+
+  <button class="projetos-botao">
+      <div class="triangulo-direito"></div>
+    Projetos
+  </button>
+
+  <button class="experiencia-botao">
+      <div class="triangulo-direito"></div>
+    Experiencia
+  </button>
+
+</div>
+
+<div class="content"></div>
 
 
 <router-outlet />
