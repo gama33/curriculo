@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { SobreMim } from './sobre-mim/sobre-mim';
 import { Projetos } from './projetos/projetos';
 import { Experiencia } from './experiencia/experiencia';
-import { CdkDrag } from '@angular/cdk/drag-drop';
+import { Placeholder } from './placeholder/placeholder';
 
 interface ButtonData {
   id: number;
@@ -16,7 +16,7 @@ interface ButtonData {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, SobreMim, Projetos, Experiencia, CdkDrag],
+  imports: [RouterOutlet, CommonModule, SobreMim, Projetos, Experiencia, Placeholder],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -24,12 +24,15 @@ interface ButtonData {
 export class App {
 
   botoes: ButtonData[] = [
-    {id: 1, label: 'sobre mim', isActive: false, type: 'botoes'}, 
-    {id: 2, label: 'projetos', isActive: false, type: 'botoes'}, 
-    {id: 3, label: 'experiencia', isActive: false, type: 'botoes'}
+    {id: 1, label: 'Sobre mim', isActive: false, type: 'botoes'}, 
+    {id: 2, label: 'Projetos', isActive: false, type: 'botoes'}, 
+    {id: 3, label: 'Experiência', isActive: false, type: 'botoes'}
   ]; // array de botoes com a interface ButtonData
 
+  paginaInicial: boolean = false; // estado para pagina inicial
+
   handleButtonClick(button: ButtonData) {
+    this.paginaInicial = false;
     this.botoes.forEach(b => {
       if (b.id === button.id) {
         b.type = 'botoes-2';
@@ -41,5 +44,11 @@ export class App {
     });
   } // metodo para lidar com o clique nos botoes, alterando o estilo e o estado ativo
 
-
-}
+  inicial() {
+    this.paginaInicial = true;
+    this.botoes.forEach(b => {
+      b.type = 'botoes';
+      b.isActive = false;
+    });
+  }
+} 
