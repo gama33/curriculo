@@ -1,1 +1,37 @@
-<p>sobre-mim works!</p>
+<div #boundaryContainer [ngClass]="'limite-area'">
+    <div [ngClass]="'caixa-foto'" cdkDrag [cdkDragBoundary]="boundaryContainer">
+        <div [ngClass]="'top-frame'">
+
+            <div [ngClass]="'botoes-esquerdo'">
+                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+            </div>
+            <div [ngClass]="'botoes-direito'">
+                <img [ngClass]="'botao'" src="underline_button.svg" alt="botao sublinhado">
+                <img [ngClass]="'botao'" src="square_button.svg" alt="botao quadrado">
+                <img [ngClass]="'botao'" src="x_button.svg" alt="botao x">
+            </div>
+
+        </div>
+        <img [ngClass]="'foto-perfil'" src="pedro_foto.jpg" alt="foto de perfil">
+    </div>
+
+    <div [ngClass]="'caixa-texto'" cdkDrag [cdkDragBoundary]="boundaryContainer">
+        <div [ngClass]="'top-frame'">
+
+            <div [ngClass]="'botoes-esquerdo'">
+                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+            </div>
+            <div [ngClass]="'botoes-direito'">
+                <img [ngClass]="'botao'" src="underline_button.svg" alt="botao sublinhado">
+                <img [ngClass]="'botao'" src="square_button.svg" alt="botao quadrado">
+                <img [ngClass]="'botao'" src="x_button.svg" alt="botao x">
+            </div>
+
+        </div>
+    </div>
+</div>
+

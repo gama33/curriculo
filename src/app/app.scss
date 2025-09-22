@@ -33,7 +33,7 @@ html, body {
   border-top-width: 0px;
   padding: 0 13px;
   margin: 0px 115px 0px 126px;
-  height: 635px;
+  height: fit-content;
 }
 
 .botoes-container {
@@ -48,8 +48,6 @@ html, body {
   display: flex;
   margin-left: 118px;
 }
-
-
 
 //classes
 .pedro {
