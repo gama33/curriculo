@@ -4,27 +4,8 @@ html, body {
   background-color: #FFDE84;
 }
 
-// fontes
-.space-mono-regular {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.space-mono-bold {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
 * {
   font-family: "Space Mono", monospace;
-}
-
-
-// containers
-.body {
-  background-color: #FFDE84;
 }
 
 .navbar {
@@ -34,7 +15,7 @@ html, body {
   border: solid black;
   border-top-width: 4px;
   padding: 0 13px;
-  margin: 37px 126px 0px 118px;
+  margin: 37px 107px 0px 118px;
   height: 60px;
 }
 
@@ -105,9 +86,7 @@ html, body {
   text-decoration: underline;
 }
 
-
-
-.sobre-mim-botao {
+.botoes{  
   border: solid black;
   border-top-width: 4px;
   flex-grow: 1;
@@ -119,22 +98,12 @@ html, body {
   padding: 0px;
   height: 60px;
   margin-right: -1px;
-}
-.sobre-mim-botao:hover {
-  text-decoration: underline;
-}
-.sobre-mim-botao:focus {
-  text-decoration: underline;
-  border-bottom-width: 0px;
+} 
+
+.botoes-2{
+  border: solid black;
   border-top-width: 2px;
-  .triangulo-direito {
-    opacity: 0%;
-  }
-}
-
-.projetos-botao {
-  border: solid black;
-  border-top-width: 4px;
+  border-bottom-width: 0px;
   flex-grow: 1;
   background-color: transparent;
   font-size: 20px;
@@ -144,40 +113,8 @@ html, body {
   padding: 0px;
   height: 60px;
   margin-right: -1px;
-}
-.projetos-botao:hover {
   text-decoration: underline;
-}
-.projetos-botao:focus {
-  text-decoration: underline;
-  border-bottom-width: 0px;
-  border-top-width: 2px;
-  .triangulo-direito {
-    opacity: 0%;
-  }
-}
-
-.experiencia-botao {
-  border: solid black;
-  border-top-width: 4px;
-  flex-grow: 1;
-  background-color: transparent;
-  font-size: 20px;
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-  padding: 0px;
-  height: 60px;
-  margin-right: -1px;
-}
-.experiencia-botao:hover {
-  text-decoration: underline;
-}
-.experiencia-botao:focus {
-  text-decoration: underline;
-  border-bottom-width: 0px;
-  border-top-width: 2px;  
-  .triangulo-direito {
+  .triangulo-direito-botao {
     opacity: 0%;
   }
 }
@@ -192,6 +129,15 @@ html, body {
 }
 
 .triangulo-direito {
+  width: 8px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 0,100% 0,0 100%);
+  background-color: black;
+  order: 1;
+  margin-left: 1279px;
+}
+
+.triangulo-direito-botao {
   margin-top: -16px;
   width: 0px;
   height: 0px;
@@ -200,4 +146,42 @@ html, body {
   border-color: transparent #000 transparent transparent;
   transform: rotate(0deg);
   margin-left: 414px;
+}
+
+
+
+
+.example-box {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+              0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.example-box:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.example-handle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ccc;
+  cursor: move;
+  width: 24px;
+  height: 24px;
 }
