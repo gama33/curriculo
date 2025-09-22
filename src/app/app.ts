@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { SobreMim } from './sobre-mim/sobre-mim';
 import { Projetos } from './projetos/projetos';
 import { Experiencia } from './experiencia/experiencia';
+import { CdkDrag } from '@angular/cdk/drag-drop';
 
 interface ButtonData {
   id: number;
@@ -15,7 +16,7 @@ interface ButtonData {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, SobreMim, Projetos, Experiencia],
+  imports: [RouterOutlet, CommonModule, SobreMim, Projetos, Experiencia, CdkDrag],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

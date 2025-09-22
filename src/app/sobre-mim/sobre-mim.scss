@@ -1,0 +1,75 @@
+.limite-area{
+    position: relative;
+    width: 1245px;
+    height: 565px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.caixa-foto {
+  width: 250px;
+  height: 250px;
+  border: solid 3px black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #D9FFA4;
+  position: relative;
+  filter: drop-shadow(4px 5px 0px #000000);
+}
+
+.caixa-texto {
+  width: 600px;
+  height: 250px;
+  border: solid 3px black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #D9FFA4;
+  position: relative;
+  filter: drop-shadow(4px 5px 0px #000000);
+}
+
+.top-frame {
+    width: 100%;
+    border: solid 3px black;
+    background: #D9FFA4;
+    position: absolute;
+    top: -18px;
+    cursor: move;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.botoes-direito {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    scale: 0.8;
+}
+
+.botoes-esquerdo {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    scale: 0.8;
+}
+
+.botao {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.foto-perfil {
+  border: solid 3px black;
+  width: 240px;
+  height: 240px;
+}
