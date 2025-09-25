@@ -1,21 +1,24 @@
 .limite-area{
-    position: relative;
-    width: 1245px;
-    height: 565px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  position: relative;
+  width: 1245px;
+  height: 565px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .caixa-foto {
+  size-adjust: auto;
   width: 250px;
   height: 250px;
   border: solid 3px black;
+  opacity: 80%;
 
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #D9FFA4;
+  background: var(--cor-secundaria);
   position: relative;
   filter: drop-shadow(4px 5px 0px #000000);
 }
@@ -24,12 +27,14 @@
   width: 600px;
   height: 250px;
   border: solid 3px black;
+  opacity: 80%;
 
+  left: 470px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #D9FFA4;
+  background: var(--cor-secundaria);
   position: relative;
   filter: drop-shadow(4px 5px 0px #000000);
 }
@@ -37,7 +42,7 @@
 .top-frame {
     width: 100%;
     border: solid 3px black;
-    background: #D9FFA4;
+    background: var(--cor-secundaria);
     position: absolute;
     top: -18px;
     cursor: move;
