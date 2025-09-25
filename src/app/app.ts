@@ -50,5 +50,6 @@ export class App {
       b.type = 'botoes';
       b.isActive = false;
     });
-  }
+  } // metodo para retornar a pagina inicial, resetando os botoes
+  
 } 
