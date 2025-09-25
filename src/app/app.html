@@ -1,23 +1,25 @@
+<!-- barra superior contendo nome, titulo e botao de contato-->
 <div [ngClass]="'navbar'">
 
   <div [ngClass]="'nome'">
     <h3 [ngClass]="'pedro'">Pedro</h3>
     <h3 [ngClass]="'gama'">Gama</h3>
   </div>
-
   <h2 [ngClass]="'titulo'" (click)="inicial()">&lt;Desenvolvedor&gt;</h2>
-
   <button [ngClass]="'contato'">Contato</button>
 
 </div>
 
+<!-- triângulos decorativos em baixo da barra superior -->
 <div [ngClass]="'triangulo-container'">
   <div [ngClass]="'triangulo-esquerdo'"></div>
   <div [ngClass]="'triangulo-direito'"></div>
 </div>
 
+<!-- Botões de navegação -->
 <div [ngClass]="'botoes-container'">
 
+  <!-- for loop para exibir botões de navegação -->
   @for (item of botoes; track $index) {
     <button [ngClass]="item.type" (click)="handleButtonClick(item)"> 
       <div class="triangulo-direito-botao"></div>
@@ -27,17 +29,25 @@
 
 </div>
 
+<!-- conteudo principal -->
 <div [ngClass]="'content'">
 
+  <!-- conteudo da seção "sobre mim" -->
   @if (botoes[0].isActive) {
     <app-sobre-mim />
   }
+
+  <!-- conteudo da seção "projetos" -->
   @if (botoes[1].isActive) {
     <app-projetos />
   }
+
+  <!-- conteudo da seção "experiencia" -->
   @if (botoes[2].isActive) {
     <app-experiencia />
   } 
+
+  <!-- conteudo da página inicial -->
   @if (paginaInicial) {
     <app-placeholder />
   }
