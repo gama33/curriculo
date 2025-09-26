@@ -5,7 +5,7 @@
 
 
     @for (item of caixas; track $index) {
-        <div [ngClass]="item.type" cdkDrag [cdkDragFreeDragPosition]="item.dragPosition" [cdkDragBoundary]="container">
+        <div [ngClass]="item.type" cdkDrag [cdkDragBoundary]="container">
 
             <!-- barra superior da janela -->
             <div [ngClass]="'top-frame'">
