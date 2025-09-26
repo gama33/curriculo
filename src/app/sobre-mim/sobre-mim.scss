@@ -7,18 +7,16 @@
 }
 
 .caixa-foto {
-  size-adjust: auto;
-  width: 250px;
-  height: 250px;
+  filter: drop-shadow(4px 5px 0px #000000);
+  background: var(--cor-secundaria);
   border: solid 3px black;
+  
+  height: 250px;
+  width: 250px;
 
-  position: absolute;
-  display: flex;
+  display: flex;  
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background: var(--cor-secundaria);
-  filter: drop-shadow(4px 5px 0px #000000);
 }
 
 .caixa-texto {
