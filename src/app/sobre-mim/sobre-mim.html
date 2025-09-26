@@ -1,63 +1,33 @@
 <!-- area contendo as janelas -->
-<div #boundaryContainer [ngClass]="'limite-area'">
+<div #container [ngClass]="'limite-area'">
 
-    <!-- caixa de foto -->
-    <div [ngClass]="'caixa-foto'" cdkDrag [cdkDragBoundary]="boundaryContainer">
+    <button (click)="moveItem()">teste</button>
 
-        <!-- barra superior da janela -->
-        <div [ngClass]="'top-frame'">
 
-            <div [ngClass]="'botoes-esquerdo'">
-                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+    @for (item of caixas; track $index) {
+        <div [ngClass]="item.type" cdkDrag [cdkDragFreeDragPosition]="item.dragPosition" [cdkDragBoundary]="container">
+
+            <!-- barra superior da janela -->
+            <div [ngClass]="'top-frame'">
+
+                <div [ngClass]="'botoes-esquerdo'">
+                    <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
+                </div>
+
+                <div [ngClass]="'botoes-direito'">
+                    <img [ngClass]="'botao'" src="underline_button.svg" alt="botao sublinhado">
+                    <img [ngClass]="'botao'" src="square_button.svg" alt="botao quadrado">
+                    <img [ngClass]="'botao'" src="x_button.svg" alt="botao x">
+                </div>
+
             </div>
 
-            <div [ngClass]="'botoes-direito'">
-                <img [ngClass]="'botao'" src="underline_button.svg" alt="botao sublinhado">
-                <img [ngClass]="'botao'" src="square_button.svg" alt="botao quadrado">
-                <img [ngClass]="'botao'" src="x_button.svg" alt="botao x">
-            </div>
-
+            @if (item.temImagem) {
+                <img [ngClass]="'foto-perfil'" src="pedro_foto.jpg" alt="foto de perfil">
+            }
         </div>
+    }
 
-        <img [ngClass]="'foto-perfil'" src="pedro_foto.jpg" alt="foto de perfil">
-    </div>
 
-    <!-- caixa de texto -->
-    <div [ngClass]="'caixa-texto'" cdkDrag [cdkDragBoundary]="boundaryContainer">
-
-        <!-- barra superior da janela -->
-        <div [ngClass]="'top-frame'">
-
-            <div [ngClass]="'botoes-esquerdo'">
-                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
-            </div>
-            <div [ngClass]="'botoes-direito'">
-                <img [ngClass]="'botao'" src="underline_button.svg" alt="botao sublinhado">
-                <img [ngClass]="'botao'" src="square_button.svg" alt="botao quadrado">
-                <img [ngClass]="'botao'" src="x_button.svg" alt="botao x">
-            </div>
-
-        </div>
-    </div>
-
-    <!-- caixa de foto -->
-    <div [ngClass]="'caixa-foto'" cdkDrag [cdkDragBoundary]="boundaryContainer">
-
-        <!-- barra superior da janela -->
-        <div [ngClass]="'top-frame'">
-
-            <div [ngClass]="'botoes-esquerdo'">
-                <img [ngClass]="'botao'" src="black_box.svg" alt="caixa preta">
-            </div>
-            <div [ngClass]="'botoes-direito'">
-                <img [ngClass]="'botao'" src="underline_button.svg" alt="botao sublinhado">
-                <img [ngClass]="'botao'" src="square_button.svg" alt="botao quadrado">
-                <img [ngClass]="'botao'" src="x_button.svg" alt="botao x">
-            </div>
-
-        </div>
-        
-        <img [ngClass]="'foto-perfil'" src="pedro_foto.jpg" alt="foto de perfil">
-    </div>
 </div>
 
