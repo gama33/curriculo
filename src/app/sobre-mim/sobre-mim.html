@@ -1,11 +1,8 @@
 <!-- area contendo as janelas -->
 <div #container [ngClass]="'limite-area'">
 
-    <button (click)="moveItem()">teste</button>
-
-
     @for (item of caixas; track $index) {
-        <div [ngClass]="item.type" cdkDrag [cdkDragBoundary]="container">
+        <div [ngClass]="item.type" cdkDrag [cdkDragBoundary]="container" [cdkDragFreeDragPosition]="item.posicao" [ngStyle]="{'z-index': item.zIndex}" (mousedown)="trazerAFrente(item)">
 
             <!-- barra superior da janela -->
             <div [ngClass]="'top-frame'">
@@ -23,7 +20,7 @@
             </div>
 
             @if (item.temImagem) {
-                <img [ngClass]="'foto-perfil'" src="pedro_foto.jpg" alt="foto de perfil">
+                <!-- <img [ngClass]="'foto-perfil'" src="" alt="foto de perfil"> -->
             }
         </div>
     }
