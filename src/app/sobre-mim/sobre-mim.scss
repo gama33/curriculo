@@ -1,7 +1,7 @@
 .limite-area{
   position: relative;
-  width: 1245px;
-  height: 565px;
+  height: 540px;
+  width: 1266px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -17,6 +17,7 @@
   display: flex;  
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 .caixa-texto {

@@ -23,7 +23,7 @@
   border: solid var(--cor-texto-borda);
   border-top-width: 0px;
   padding: 0 13px;
-  margin: 0px 115px 0px 126px;
+  margin: 0px 114.1px 0px 125px;
   height: fit-content;
   background-color: var(--cor-principal);
 }
@@ -32,7 +32,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: -8px 118px 0px 126px;
+  margin: -8px 116px 0px 125px;
   height: 60px;
   background-color: var(--cor-principal);
 }
@@ -129,7 +129,7 @@
   clip-path: polygon(0 0,100% 0,0 100%);
   background-color: var(--cor-texto-borda);;
   order: 1;
-  margin-left: 1279px;
+  margin-left: 1295px;
 }
 
 .triangulo-direito-botao {
@@ -140,5 +140,5 @@
   border-width: 0 8px 8px 0;
   border-color: transparent var(--cor-texto-borda) transparent transparent;
   transform: rotate(0deg);
-  margin-left: 414px;
+  margin-left: 420px;
 }

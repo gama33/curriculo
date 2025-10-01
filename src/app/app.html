@@ -35,20 +35,13 @@
   <!-- conteudo da seção "sobre mim" -->
   @if (botoes[0].isActive) {
     <app-sobre-mim />
-  }
-
-  <!-- conteudo da seção "projetos" -->
-  @if (botoes[1].isActive) {
+  } @else if (botoes[1].isActive) {
     <app-projetos />
-  }
-
-  <!-- conteudo da seção "experiencia" -->
-  @if (botoes[2].isActive) {
+  } @else if (botoes[2].isActive) {
     <app-experiencia />
-  } 
-
-  <!-- conteudo da página inicial -->
-  @if (paginaInicial) {
+  } @else if (paginaInicial) {
+    <app-placeholder />
+  } @else {
     <app-placeholder />
   }
 

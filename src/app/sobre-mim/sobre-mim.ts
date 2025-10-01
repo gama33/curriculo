@@ -8,7 +8,9 @@ interface Caixas {
   id: number;
   label: string;
   temImagem?: boolean;
+  zIndex: number;
   type: 'caixa-foto' | 'caixa-texto';
+  posicao: { x: number; y: number };
 }
 
 @Component({
@@ -22,11 +24,15 @@ interface Caixas {
 export class SobreMim {
 
   caixas: Caixas[] = [
-    {id: 1, label: 'caixa foto', temImagem: true, type: 'caixa-foto'}, 
-    {id: 2, label: 'caixa texto', temImagem: false, type: 'caixa-texto'}
+    {id: 1, label: 'caixa foto', temImagem: true, zIndex: 10, type: 'caixa-foto', posicao: {x: 50, y: 50}}, 
+    {id: 2, label: 'caixa texto', temImagem: false, zIndex: 11, type: 'caixa-texto', posicao: {x: 250, y: 150}},
+    {id: 3, label: 'caixa foto', temImagem: true, zIndex: 10, type: 'caixa-foto', posicao: {x: 750, y: 50}}
   ];
 
-  moveItem() {
-    this.caixas = [...this.caixas].reverse();
+  private zIndexAlto = 11;
+
+  trazerAFrente(window: Caixas) {
+    this.zIndexAlto++;
+    window.zIndex = this.zIndexAlto;
   }
 }
